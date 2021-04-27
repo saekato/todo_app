@@ -1,15 +1,15 @@
 class GoalsController < ApplicationController
-  before_action :authenticate_user!
+   before_action :authenticate_user!
   before_action :set_goal, only: [:show, :edit, :update, :destroy]
 
   # GET /goals
   def index
-    @goals = current_user.goals.all
+     @goals = current_user.goals.all
   end
 
   # GET /goals/new
   def new
-    @goal = current_user.goals.new
+     @goal = current_user.goals.new
   end
 
   # GET /goals/1/edit
